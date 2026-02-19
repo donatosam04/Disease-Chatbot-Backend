@@ -1,0 +1,67 @@
+{
+  "varicose veins": "varicose_veins",
+  "varicose_veins": "varicose_veins",
+
+  "drug reaction": "drug_reaction",
+  "drug_reaction": "drug_reaction",
+
+  "common cold": "common_cold",
+  "common_cold": "common_cold",
+
+  "fungal infection": "fungal_infection",
+  "fungal_infection": "fungal_infection",
+
+  "peptic ulcer disease": "peptic_ulcer_disease",
+  "peptic_ulcer_disease": "peptic_ulcer_disease",
+
+  "diabetes_": "diabetes",
+  "diabetes": "diabetes",
+
+  "hypertension_": "hypertension",
+  "hypertension": "hypertension",
+
+  "kidney stone": "kidney_stones",
+  "kidney stones": "kidney_stones",
+  "kidney_stones": "kidney_stones",
+
+  "food poisoning": "food_poisoning",
+  "food_poisoning": "food_poisoning",
+
+  "gall stone": "gallstones",
+  "gall stones": "gallstones",
+  "gallstones": "gallstones",
+
+  "parkinson's disease": "parkinson_disease",
+  "parkinson disease": "parkinson_disease",
+  "parkinson_disease": "parkinson_disease",
+
+  "alzheimer's disease": "alzheimer_disease",
+  "alzheimer disease": "alzheimer_disease",
+  "alzheimer_disease": "alzheimer_disease",
+
+  "multiple sclerosis": "multiple_sclerosis",
+  "multiple_sclerosis": "multiple_sclerosis",
+
+  "heart failure": "heart_failure",
+  "heart_failure": "heart_failure",
+
+  "irregular heartbeat": "arrhythmia",
+  "arrhythmia": "arrhythmia",
+
+  "iron deficiency anemia": "anemia",
+  "iron_deficiency_anemia": "anemia",
+  "anemia": "anemia",
+
+  "bronchiectasis": "bronchitis",
+  "bronchitis": "bronchitis",
+
+  "tonsillitis": "laryngitis",
+  "laryngitis": "laryngitis",
+
+  "ear infection": "otitis_media",
+  "ear_infection": "otitis_media",
+  "otitis media": "otitis_media",
+  "otitis_media": "otitis_media",
+
+  "hyperlipidemia": "hypertension"
+}

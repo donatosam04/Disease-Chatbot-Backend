@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Health Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="app-container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">🩺</div>
+        <h2>AI Health Assistant</h2>
+        <p class="tagline">Hybrid ML + AI System</p>
+    </div>
+
+    <!-- Main Chat Area -->
+    <div class="main">
+
+        <div class="chat-header">
+            <h1>How can I help you today?</h1>
+            <p>Describe your symptoms for intelligent analysis</p>
+        </div>
+
+        <div class="chat-messages" id="chatBox">
+        </div>
+
+        <div class="chat-input">
+            <input 
+                type="text" 
+                id="userInput" 
+                placeholder="Type your symptoms (e.g., fever, headache, nausea...)" 
+                onkeypress="handleKey(event)"
+            />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

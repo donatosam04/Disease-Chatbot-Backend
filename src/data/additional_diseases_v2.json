@@ -1,0 +1,106 @@
+{
+  "atrial_fibrillation": [
+    "I feel my heart racing irregularly with dizziness",
+    "I experience fluttering in my chest and fatigue",
+    "My heartbeat feels uneven and I get short of breath",
+    "I feel palpitations and weakness suddenly"
+  ],
+
+  "myocarditis": [
+    "I have chest pain and shortness of breath",
+    "I feel extreme fatigue with chest discomfort",
+    "I experience rapid heartbeat and weakness",
+    "I have flu like symptoms with chest pain"
+  ],
+
+  "pericarditis": [
+    "I have sharp chest pain that worsens when lying down",
+    "Chest pain improves when I sit forward",
+    "I feel pain while breathing deeply",
+    "I have fever with chest discomfort"
+  ],
+
+  "deep_vein_thrombosis": [
+    "My leg is swollen and painful",
+    "I have warmth and redness in my calf",
+    "I feel leg pain after long travel",
+    "One leg feels tender and swollen"
+  ],
+
+  "cardiomyopathy": [
+    "I feel shortness of breath during activity",
+    "I experience fatigue and swelling in legs",
+    "I have chest pain and irregular heartbeat",
+    "I feel dizzy with exertion"
+  ],
+
+  "neuropathy": [
+    "I feel numbness and tingling in my hands",
+    "I experience burning pain in my feet",
+    "I have loss of sensation in limbs",
+    "I feel pins and needles constantly"
+  ],
+
+  "bell_palsy": [
+    "One side of my face is drooping",
+    "I cannot close one eye properly",
+    "I have facial weakness suddenly",
+    "My smile is uneven and face feels numb"
+  ],
+
+  "cerebral_palsy": [
+    "I have difficulty with muscle coordination",
+    "I experience stiff muscles and movement issues",
+    "I have problems with balance and posture",
+    "I struggle with motor control"
+  ],
+
+  "essential_tremor": [
+    "My hands shake when I try to hold objects",
+    "I experience trembling while writing",
+    "My hands shake during movement",
+    "I have uncontrollable hand tremors"
+  ],
+
+  "myasthenia_gravis": [
+    "I have muscle weakness that worsens with activity",
+    "I feel drooping eyelids and fatigue",
+    "I struggle with chewing and speaking",
+    "My muscles tire very easily"
+  ],
+
+  "gout": [
+    "I have sudden severe pain in my big toe",
+    "My joints are swollen and painful",
+    "I feel intense joint pain at night",
+    "My toe is red and extremely tender"
+  ],
+
+  "irritable_bowel_syndrome": [
+    "I have abdominal pain with bloating",
+    "I experience alternating diarrhea and constipation",
+    "My stomach cramps after eating",
+    "I feel relief after bowel movements"
+  ],
+
+  "celiac_disease": [
+    "I feel bloated after eating gluten",
+    "I have chronic diarrhea and fatigue",
+    "I experience weight loss and stomach pain",
+    "I feel sick after eating wheat products"
+  ],
+
+  "lactose_intolerance": [
+    "I get bloated after drinking milk",
+    "I have diarrhea after dairy products",
+    "I feel stomach cramps after cheese",
+    "I experience gas after dairy intake"
+  ],
+
+  "hyperlipidemia": [
+    "I have high cholesterol levels",
+    "My doctor said my lipid levels are high",
+    "I feel no symptoms but have abnormal blood reports",
+    "I have elevated triglycerides"
+  ]
+}

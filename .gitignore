@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+env/
+
+# Data folders (IGNORE TRAINING DATA)
+data/processed/
+data/interim/
+data/raw/huggingface/
+data/raw/kaggle_disease_symptoms/
+data/raw/mendeley/
+
+# Large training artifacts
+*.npy
+*.parquet
+*.csv
+
+# EXCEPT this vaccination datasets
+!data/raw/Complete Vaccination Dataset.csv
+
+# Models (if very large, optional)
+models_saved/
+evaluation/
+
+# OS
+.DS_Store
+Thumbs.db

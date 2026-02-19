@@ -1,0 +1,227 @@
+{
+  "anemia": [
+    "I feel tired all the time and get dizzy easily",
+    "I have pale skin and shortness of breath",
+    "I feel weak and experience frequent headaches",
+    "I feel fatigued even after resting"
+  ],
+
+  "kidney_stones": [
+    "I have severe pain in my lower back and side",
+    "I feel pain while urinating with blood in urine",
+    "Sharp pain comes in waves from my back to groin",
+    "I have nausea along with severe flank pain"
+  ],
+
+  "sinusitis": [
+    "I have facial pain and pressure near my nose",
+    "My nose is blocked and I have a headache",
+    "I have thick nasal discharge and facial pain",
+    "Pain increases when I bend forward"
+  ],
+
+  "conjunctivitis": [
+    "My eyes are red and itchy with discharge",
+    "I have watery eyes and irritation",
+    "My eyes feel gritty and sticky in the morning",
+    "I have redness and swelling in my eyes"
+  ],
+
+  "appendicitis": [
+    "I have pain in the lower right abdomen",
+    "The pain started near my belly button and moved down",
+    "I feel nausea with sharp abdominal pain",
+    "My stomach hurts badly and I cannot move"
+  ],
+
+  "gallstones": [
+    "I have pain in the upper right abdomen",
+    "Pain occurs after eating fatty foods",
+    "I feel nausea and abdominal pain",
+    "Sharp pain under the ribs on the right side"
+  ],
+
+  "dehydration": [
+    "I feel very thirsty and weak",
+    "I have dark urine and dry mouth",
+    "I feel dizzy and tired",
+    "I am not urinating frequently"
+  ],
+
+  "food_poisoning": [
+    "I have vomiting and diarrhea after eating outside",
+    "I feel stomach cramps and nausea",
+    "I have loose motions and fever",
+    "I feel sick after eating contaminated food"
+  ],
+
+  "epilepsy": [
+    "I experience sudden seizures and loss of consciousness",
+    "I have recurrent seizures with muscle jerking",
+    "I often black out due to seizure episodes"
+  ],
+
+  "parkinson_disease": [
+    "I have hand tremors and slow movement",
+    "My muscles feel stiff and I have balance issues",
+    "I experience shaking and difficulty walking"
+  ],
+
+  "alzheimer_disease": [
+    "I have severe memory loss and confusion",
+    "I forget familiar people and places",
+    "I struggle with daily tasks due to memory issues"
+  ],
+
+  "multiple_sclerosis": [
+    "I have numbness and weakness in my limbs",
+    "I experience vision problems and fatigue",
+    "I have difficulty with coordination and balance"
+  ],
+
+  "angina": [
+    "I feel chest pain during physical activity",
+    "I experience chest tightness and discomfort",
+    "I get chest pain that goes away with rest"
+  ],
+
+  "arrhythmia": [
+    "My heartbeat feels irregular or fast",
+    "I experience palpitations and dizziness",
+    "My heart feels like it skips beats"
+  ],
+
+  "heart_failure": [
+    "I have shortness of breath and swelling in my legs",
+    "I feel tired even after minimal activity",
+    "I experience fluid buildup and breathing difficulty"
+  ],
+
+  "stroke": [
+    "I suddenly lost movement on one side of my body",
+    "I have difficulty speaking and facial drooping",
+    "I experienced sudden numbness and confusion"
+  ],
+  
+  "iron_deficiency_anemia": [
+    "I feel extremely tired and weak even after resting",
+    "I get dizzy often and feel short of breath",
+    "My skin looks pale and I feel fatigued",
+    "I have frequent headaches and weakness",
+    "I feel exhausted during normal daily activities"
+  ],
+
+  "vitamin_d_deficiency": [
+    "I have bone pain and muscle weakness",
+    "My bones hurt and I feel tired most of the time",
+    "I experience frequent body pain and fatigue",
+    "I feel weak and my joints ache",
+    "I have low energy and bone discomfort"
+  ],
+
+  "hyperlipidemia": [
+    "My cholesterol levels are very high",
+    "I was told I have high lipid levels in my blood",
+    "I have elevated cholesterol and triglycerides",
+    "My blood test shows high fat levels",
+    "I have unhealthy cholesterol readings"
+  ],
+
+  "bronchiectasis": [
+    "I have a chronic cough with thick mucus",
+    "I cough up phlegm every day",
+    "I experience breathlessness with mucus production",
+    "I have recurring chest infections and cough",
+    "I cough continuously with sputum"
+  ],
+
+  "pleurisy": [
+    "I feel sharp chest pain when breathing deeply",
+    "My chest hurts when I cough or breathe",
+    "I experience stabbing pain in my chest",
+    "Breathing causes severe chest discomfort",
+    "I feel pain on one side of my chest while breathing"
+  ],
+
+  "peripheral_neuropathy": [
+    "I feel numbness and tingling in my hands and feet",
+    "My feet feel like pins and needles",
+    "I experience burning pain in my legs",
+    "I have loss of sensation in my limbs",
+    "My hands and feet feel weak and numb"
+  ],
+
+  "bell_palsy": [
+    "One side of my face suddenly became weak",
+    "I cannot move one side of my face properly",
+    "My face looks droopy on one side",
+    "I have difficulty closing one eye",
+    "Half of my face feels paralyzed"
+  ],
+
+  "measles": [
+    "I have fever with red rash all over my body",
+    "I developed rash after high fever",
+    "I have cough, fever, and skin rash",
+    "My body is covered with red spots",
+    "I have fever followed by rash"
+  ],
+
+  "mumps": [
+    "My cheeks are swollen and painful",
+    "I have swelling near my jaw with fever",
+    "My face looks puffy near the ears",
+    "I feel pain while chewing",
+    "I have jaw swelling and fever"
+  ],
+
+  "rubella": [
+    "I have mild fever with pink skin rash",
+    "I developed rash with swollen lymph nodes",
+    "I have light fever and rash",
+    "My skin has pink spots with fever",
+    "I feel sick with rash and body pain"
+  ],
+
+  "tonsillitis": [
+    "I have severe throat pain and difficulty swallowing",
+    "My tonsils are swollen and painful",
+    "I have sore throat with fever",
+    "My throat hurts badly when I swallow",
+    "I have white patches on my tonsils"
+  ],
+
+  "otitis_media": [
+    "I have ear pain and pressure",
+    "My ear hurts and I have mild fever",
+    "I feel fluid inside my ear",
+    "My hearing is reduced due to ear pain",
+    "I have ear infection with discomfort"
+  ],
+
+  "laryngitis": [
+    "My voice has become hoarse",
+    "I lost my voice suddenly",
+    "I have sore throat with voice loss",
+    "My throat feels irritated and dry",
+    "I cannot speak clearly"
+  ],
+
+  "irritable_bowel_syndrome": [
+    "I have abdominal pain with bloating",
+    "My bowel movements are irregular",
+    "I experience diarrhea and constipation alternately",
+    "I have stomach cramps and gas",
+    "My stomach feels uncomfortable after eating"
+  ],
+
+  "constipation": [
+    "I have difficulty passing stools",
+    "My bowel movements are very infrequent",
+    "I feel bloated and uncomfortable",
+    "I strain a lot during bowel movements",
+    "I feel heaviness in my abdomen"
+  ]
+
+
+}
