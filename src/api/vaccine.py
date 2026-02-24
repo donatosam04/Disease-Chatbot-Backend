@@ -1,95 +1,142 @@
-import os
+from pathlib import Path
 import pandas as pd
 from datetime import datetime
 import re
 
-# ---------------------------------------------------
-# Load dataset once (safe loading with encoding fix)
-# ---------------------------------------------------
+# --------------------------------------------------
+# DATASET LOADING (Bulletproof Path Handling)
+# --------------------------------------------------
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
-DATA_PATH = os.path.join(BASE_DIR, "data", "raw", "Complete Vaccination Dataset.csv")
+BASE_DIR = Path(__file__).resolve().parents[2]
+DATA_FOLDER = BASE_DIR / "data" / "raw"
+
+vaccine_df = None
 
 try:
-    vaccine_df = pd.read_csv(DATA_PATH, encoding="ISO-8859-1")
+    for file_name in [
+        "Complete Vaccination Dataset.csv",
+        "Complete Vaccination Dataset.xlsx"
+    ]:
+        path = DATA_FOLDER / file_name
+
+        if path.exists():
+            print(f"✅ Loading vaccine dataset from: {path}")
+
+            if file_name.endswith(".csv"):
+                vaccine_df = pd.read_csv(path, encoding="latin1")
+            else:
+                vaccine_df = pd.read_excel(path)
+
+            break
+
+    if vaccine_df is None:
+        print("⚠ Vaccine dataset NOT found in data/raw")
+
 except Exception as e:
-    print("Vaccine dataset loading error:", e)
+    print("❌ Vaccine dataset loading error:", e)
     vaccine_df = None
 
-
-# ---------------------------------------------------
-# Extract birth date from text
-# ---------------------------------------------------
+# --------------------------------------------------
+# DATE EXTRACTION
+# --------------------------------------------------
 
 def extract_birth_date(text: str):
-    """
-    Supports:
-    - 17 February 2025
-    - 17 february 2025
-    - 17-02-2025
-    """
+    patterns = [
+        r'(\d{1,2}\s+\w+\s+\d{4})',
+        r'(\d{1,2}-\d{1,2}-\d{4})',
+        r'(\d{1,2}/\d{1,2}/\d{4})'
+    ]
 
-    text = text.strip()
+    for pattern in patterns:
+        match = re.search(pattern, text)
+        if match:
+            date_str = match.group(1)
 
-    # Format: DD Month YYYY
-    match = re.search(r'(\d{1,2}\s+\w+\s+\d{4})', text)
-    if match:
-        try:
-            return datetime.strptime(match.group(1), "%d %B %Y")
-        except:
-            pass
+            for fmt in ("%d %B %Y", "%d-%m-%Y", "%d/%m/%Y"):
+                try:
+                    birth_date = datetime.strptime(date_str, fmt)
 
-    # Format: DD-MM-YYYY
-    match = re.search(r'(\d{1,2}-\d{1,2}-\d{4})', text)
-    if match:
-        try:
-            return datetime.strptime(match.group(1), "%d-%m-%Y")
-        except:
-            pass
+                    # Prevent future dates
+                    if birth_date > datetime.today():
+                        return None
+
+                    return birth_date
+                except:
+                    continue
 
     return None
 
+# --------------------------------------------------
+# AGE CALCULATION
+# --------------------------------------------------
 
-# ---------------------------------------------------
-# Vaccine Response Logic
-# ---------------------------------------------------
+def calculate_age(birth_date):
+    today = datetime.today()
+    days = (today - birth_date).days
 
-def vaccine_response(text: str):
+    return {
+        "weeks": max(days // 7, 0),
+        "months": max(days // 30, 0),
+        "years": max(days // 365, 0)
+    }
+
+# --------------------------------------------------
+# STATUS CLASSIFICATION
+# --------------------------------------------------
+
+def classify_status(current_age_weeks, scheduled_week):
+
+    if current_age_weeks < scheduled_week:
+        return "Upcoming"
+
+    elif scheduled_week <= current_age_weeks <= scheduled_week + 2:
+        return "Due"
+
+    else:
+        return "Overdue"
+
+# --------------------------------------------------
+# MAIN TRACKING FUNCTION
+# --------------------------------------------------
+
+def vaccine_tracker(text: str):
 
     if vaccine_df is None:
         return None
 
     birth_date = extract_birth_date(text)
+
     if not birth_date:
-        return None  # Not a vaccine-related message
+        return None
 
-    today = datetime.today()
-    age_weeks = (today - birth_date).days // 7
+    age = calculate_age(birth_date)
+    age_weeks = age["weeks"]
 
-    # Normalize column names
-    df = vaccine_df.copy()
-    df.columns = [col.strip().lower() for col in df.columns]
+    vaccine_status_list = []
 
-    if "weeks_due" not in df.columns or "vaccine_name" not in df.columns:
-        return "⚠ Vaccine dataset format is incorrect."
+    for _, row in vaccine_df.iterrows():
 
-    # Convert weeks_due safely to numeric
-    df["weeks_due"] = pd.to_numeric(df["weeks_due"], errors="coerce")
-    df = df.dropna(subset=["weeks_due"])
+        age_group = str(row.get("Age_Group", "")).lower()
+        vaccine_name = str(row.get("Vaccine", "Unknown"))
+        disease = str(row.get("Disease_Prevented", "Unknown"))
 
-    # Get vaccines due up to current age
-    due_vaccines = df[df["weeks_due"] <= age_weeks]
+        week_match = re.search(r'(\d+)\s*week', age_group)
 
-    if due_vaccines.empty:
-        return "No vaccines are currently due."
+        if week_match:
+            scheduled_week = int(week_match.group(1))
+            status = classify_status(age_weeks, scheduled_week)
 
-    message = f"Your baby is currently {age_weeks} weeks old.\n\n"
-    message += "Recommended vaccines:\n"
+            vaccine_status_list.append({
+                "vaccine": vaccine_name,
+                "prevents": disease,
+                "scheduled_week": scheduled_week,
+                "status": status
+            })
 
-    for _, row in due_vaccines.iterrows():
-        message += f"• {row['vaccine_name']} (Week {int(row['weeks_due'])})\n"
+    if not vaccine_status_list:
+        return None
 
-    message += "\n⚠ This schedule follows standard immunization guidelines."
-    message += "\nPlease consult your pediatrician before vaccination."
-
-    return message
+    return {
+        "child_age": age,
+        "vaccines": vaccine_status_list
+    }
