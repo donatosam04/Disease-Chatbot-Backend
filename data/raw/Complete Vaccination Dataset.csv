@@ -1,0 +1,31 @@
+Category,Age_Group,Vaccine,Disease_Prevented
+Infant,At Birth,BCG,Tuberculosis
+Infant,At Birth,OPV-0,Polio
+Infant,At Birth,Hepatitis B-0,Hepatitis B
+Infant,6 Weeks,Pentavalent-1,"Diphtheria, Pertussis, Tetanus, HepB, Hib"
+Infant,6 Weeks,OPV-1,Polio
+Infant,6 Weeks,IPV-1,Polio
+Infant,6 Weeks,Rotavirus-1,Diarrhea (Rotavirus)
+Infant,6 Weeks,PCV-1,Pneumococcal diseases
+Infant,10 Weeks,Pentavalent-2,"DPT, HepB, Hib"
+Infant,10 Weeks,OPV-2,Polio
+Infant,10 Weeks,Rotavirus-2,Diarrhea (Rotavirus)
+Infant,14 Weeks,Pentavalent-3,"DPT, HepB, Hib"
+Infant,14 Weeks,OPV-3,Polio
+Infant,14 Weeks,IPV-2,Polio
+Infant,14 Weeks,Rotavirus-3,Diarrhea (Rotavirus)
+Infant,14 Weeks,PCV-2,Pneumococcal diseases
+Infant,9–12 Months,MR-1,"Measles, Rubella"
+Infant,9–12 Months,PCV Booster,Pneumococcal diseases
+Infant,9–12 Months,JE-1,Japanese Encephalitis
+Child,16–24 Months,MR-2,"Measles, Rubella"
+Child,16–24 Months,DPT Booster-1,"Diphtheria, Pertussis, Tetanus"
+Child,16–24 Months,OPV Booster,Polio
+Child,16–24 Months,JE-2,Japanese Encephalitis
+Child,5–6 Years,DPT Booster-2,"Diphtheria, Pertussis, Tetanus"
+Adolescent,10 & 16 Years,Td,"Tetanus, Diphtheria"
+Adult,Eligible,COVID-19,COVID-19
+Adult,Elderly / Comorbid,Influenza,Influenza
+Adolescent,9–14 Years,HPV,Cervical & other cancers
+Adult,Healthcare Workers,Hepatitis B,Hepatitis B
+Adult,Travelers,Typhoid,Typhoid Fever
